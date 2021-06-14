@@ -1,6 +1,6 @@
 //=============================================
-
-
+//This is a program that prints out the pi upto n number of decimals
+//Where n >= 51 and n is specified by the user
 //=============================================
 #include <iostream> 
 #include <iomanip>
