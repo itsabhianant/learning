@@ -19,7 +19,6 @@ bool Checking_Account::withdraw(double amount) {
 }
 
 //Outputing the object
-std::ostream &operator<<(std::ostream &os, const Checking_Account &c_account) {
-    os << "C-> " << c_account.name << " : " << c_account.balance << " : " << c_account.fee << endl;
-    return os;
+void Checking_Account::print(std::ostream &os) const {
+    os << "C-> " << name << " : " << balance << " : " << fee;
 }

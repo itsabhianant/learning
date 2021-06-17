@@ -15,15 +15,16 @@ bool Trust_Account::deposit(double amount) {
 //Method for withdraw
 bool Trust_Account::withdraw(double amount) {
     if (this->count < 3) {
-        this->count++;
-        return Savings_Account::withdraw(amount);
+        bool flag = Savings_Account::withdraw(amount);
+        if (flag)
+            this->count++;
+        return flag;
     } else {
         return false;
     }
 }
 
 //Outputing the object
-std::ostream &operator<<(std::ostream &os, const Trust_Account &t_account) {
-    os << "T-> " << t_account.name << " : " << t_account.balance << " : " << t_account.rate << " : " << t_account.count << endl;
-    return os;
+void Trust_Account::print(std::ostream &os) const {
+    os << "T-> " << name << " : " << balance << " : " << rate << " : " << count;
 }
