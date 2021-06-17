@@ -16,7 +16,6 @@ bool Savings_Account::deposit(double amount) {
 }
 
 //Outputing the object
-std::ostream &operator<<(std::ostream &os, const Savings_Account &s_account) {
-    os << "S-> " << s_account.name << " : " << s_account.balance << " : " << s_account.rate << endl;
-    return os;
+void Savings_Account::print(std::ostream &os) const {
+    os << "S-> " << name << " : " << balance << " : " << rate;
 }
