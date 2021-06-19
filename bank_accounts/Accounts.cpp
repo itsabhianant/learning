@@ -3,12 +3,14 @@
 //Construtor
 Account::Account(string n, double b) 
     :name{n}, balance{b} {
+    if (balance < 0.0)
+        throw IllegalBalanceException {};
 }
 
 //Method for deposit
 bool Account::deposit(double amount) {
     if (amount < 0)
-        return false;
+        throw IllegalBalanceException {};
     else {
         balance += amount;
         return true;
@@ -21,7 +23,7 @@ bool Account::withdraw(double amount) {
         balance -= amount;
         return true;
     } else {
-        return false;
+        throw InsufficientFundException {};
     }
 }
 

@@ -1,14 +1,6 @@
 #pragma once
 
-#include <iostream>
-#include <string>
-#include <vector>
-
-using std::cout;
-using std::cin;
-using std::endl;
-using std::string;
-using std::vector;
+#include "Exceptions.hpp"
 
 class I_Printable {
     friend std::ostream &operator<<(std::ostream &os, const I_Printable &obj);  //Operator overloading for printing the object
