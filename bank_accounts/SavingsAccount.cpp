@@ -11,7 +11,7 @@ bool Savings_Account::deposit(double amount) {
         amount += amount * (rate / 100);
         return Account::deposit(amount);
     } else {
-        return false;
+        throw IllegalBalanceException {};
     }
 }
 

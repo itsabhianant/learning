@@ -14,7 +14,7 @@ bool Checking_Account::withdraw(double amount) {
         amount += fee;
         return Account::withdraw(amount);
     } else {
-        return false;
+        throw InsufficientFundException {};
     }
 }
 
