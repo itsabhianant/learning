@@ -1,0 +1,5 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/abhi/Hangman'
+g++ -ggdb3 -std=c++17 -O0 -Wall -Werror -Wextra -Wno-sign-compare -Wno-unused-parameter -Wno-unused-variable -Wshadow main.cpp  -lcrypt -lm -o a 
+make: Leaving directory '/home/abhi/Hangman'
+ 
